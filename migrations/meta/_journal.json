@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1788984940642,
+      "tag": "0000_reflective_nekra",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1789002111813,
+      "tag": "0001_smiling_galactus",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1789004768821,
+      "tag": "0002_organic_stingray",
+      "breakpoints": true
+    }
+  ]
+}

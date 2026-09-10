@@ -1,0 +1,12 @@
+node_modules/
+.svelte-kit/
+.wrangler/
+.env*
+.dev.vars*
+!.env.example
+dist/
+*.log
+.DS_Store
+artifacts/
+
+!.dev.vars.example

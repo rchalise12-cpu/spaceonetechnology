@@ -1,0 +1,4 @@
+APP_ORIGIN=http://localhost:8787
+EMAIL_FROM=invites@spaceonetechnology.com
+MAIL_MODE=local
+ALLOW_PUBLIC_SIGNUP=true

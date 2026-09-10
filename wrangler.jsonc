@@ -1,0 +1,39 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "space-one-clients",
+	"main": ".svelte-kit/cloudflare/_worker.js",
+	"compatibility_date": "2026-09-09",
+	"compatibility_flags": ["nodejs_compat"],
+	"assets": {
+		"binding": "ASSETS",
+		"directory": ".svelte-kit/cloudflare"
+	},
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "space-one-clients",
+			"database_id": "f53c8879-6f8b-4e1c-9515-5aa2c43d9aa3",
+			"migrations_dir": "migrations"
+		}
+	],
+	"r2_buckets": [
+		{
+			"binding": "FILES",
+			"bucket_name": "space-one-tech-client-files"
+		}
+	],
+	"observability": {
+		"enabled": true,
+		"head_sampling_rate": 1
+	},
+	"limits": {
+		"cpu_ms": 30000
+	},
+	"vars": {
+		"APP_ORIGIN": "https://clients.spaceonetechnology.com",
+		"EMAIL_FROM": "invites@spaceonetechnology.com",
+		"MAIL_MODE": "cloudflare",
+		"ALLOW_PUBLIC_SIGNUP": "true"
+	},
+	"send_email": [{ "name": "EMAIL" }]
+}

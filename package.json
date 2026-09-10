@@ -1,0 +1,54 @@
+{
+  "name": "space-one-client-portal",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "vite dev --host 127.0.0.1",
+    "build": "vite build",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "types": "wrangler types",
+    "preview": "wrangler dev",
+    "deploy": "npm run check && npm run build && wrangler deploy",
+    "db:local": "wrangler d1 migrations apply space-one-clients --local",
+    "db:remote": "wrangler d1 migrations apply space-one-clients --remote",
+    "seed:local": "wrangler d1 execute space-one-clients --local --file scripts/demo.sql",
+    "admin": "node scripts/promote-admin.mjs",
+    "test": "node --experimental-strip-types --test tests/*.test.mjs",
+    "test:integration": "node --test --test-concurrency=1 tests/integration/*.test.mjs",
+    "db:generate": "drizzle-kit generate"
+  },
+  "dependencies": {
+    "@fontsource-variable/dm-sans": "^5.3.0",
+    "@lucide/svelte": "^1.43.0",
+    "@noble/hashes": "^2.0.1",
+    "drizzle-orm": "^0.45.2",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-cloudflare": "^7.2.9",
+    "@sveltejs/kit": "^2.67.0",
+    "@sveltejs/vite-plugin-svelte": "^7.1.2",
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/node": "^22.0.0",
+    "drizzle-kit": "^0.31.10",
+    "prettier": "^3.9.6",
+    "prettier-plugin-svelte": "^4.1.1",
+    "svelte": "^5.56.4",
+    "svelte-check": "^4.7.1",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^6.0.3",
+    "vite": "^8.1.0",
+    "wrangler": "^4.0.0"
+  },
+  "overrides": {
+    "cookie": "^0.7.2",
+    "sharp": "^0.35.4",
+    "@esbuild-kit/core-utils": {
+      "esbuild": "^0.25.12"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+node_modules
+.svelte-kit
+.wrangler
+worker-configuration.d.ts
+package-lock.json
+migrations/meta
+artifacts
+
+*.code-workspace
+pnpm-lock.yaml
